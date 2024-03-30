@@ -57,19 +57,19 @@ const InitialLayout = () => {
   // Conditionally render the correct layout
   return (
     <>
-      {/* {!client && (
+      {!client && (
         <Stack>
           <Stack.Screen name="index" options={{ headerShown: false }} />
         </Stack>
-      )} */}
-      {/* {client && ( */}
-      <StreamVideo client={client}>
-        <OverlayProvider>
-          <Slot />
-          <Toast />
-        </OverlayProvider>
-      </StreamVideo>
-      {/* )} */}
+      )}
+      {client && (
+        <StreamVideo client={client}>
+          <OverlayProvider>
+            <Slot />
+            <Toast />
+          </OverlayProvider>
+        </StreamVideo>
+      )}
     </>
   );
 };
